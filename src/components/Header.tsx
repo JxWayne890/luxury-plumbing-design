@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,10 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavigation = (sectionId: string) => {
+    navigate(`/#${sectionId}`);
+  };
+
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-navy/90 backdrop-blur-sm' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
@@ -24,9 +29,9 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-white hover:text-gold transition-colors">Services</a>
-            <a href="#testimonials" className="text-white hover:text-gold transition-colors">Testimonials</a>
-            <a href="#contact" className="text-white hover:text-gold transition-colors">Contact</a>
+            <button onClick={() => handleNavigation('services')} className="text-white hover:text-gold transition-colors">Services</button>
+            <button onClick={() => handleNavigation('testimonials')} className="text-white hover:text-gold transition-colors">Testimonials</button>
+            <button onClick={() => handleNavigation('contact')} className="text-white hover:text-gold transition-colors">Contact</button>
             <Link to="/faqs" className="text-white hover:text-gold transition-colors">FAQs</Link>
           </nav>
 
