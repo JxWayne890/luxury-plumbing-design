@@ -18,8 +18,8 @@ const Header = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-navy/90 backdrop-blur-sm' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="text-2xl font-playfair text-white font-bold">
-            Adams P&H
+          <div className="text-xl font-playfair text-white font-bold">
+            Adams Plumbing and Heating
           </div>
           
           <nav className="hidden md:flex space-x-8">
