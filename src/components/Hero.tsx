@@ -32,19 +32,11 @@ const Hero = () => {
               Get Your Free Quote Today
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-white border-white hover:bg-white/10"
-              onClick={() => scrollToSection('why-choose-us')}
-            >
-              Why Choose Us?
-            </Button>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
