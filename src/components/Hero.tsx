@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-r from-navy to-navy/90">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b')] bg-cover bg-center mix-blend-overlay opacity-50" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599766431396-90f7a2d7178f')] bg-cover bg-center mix-blend-overlay opacity-50" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
