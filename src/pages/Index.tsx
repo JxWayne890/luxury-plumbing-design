@@ -4,7 +4,6 @@ import Services from "@/components/Services"
 import Testimonials from "@/components/Testimonials"
 import WhyChooseUs from "@/components/WhyChooseUs"
 import ContactForm from "@/components/ContactForm"
-import FloatingButton from "@/components/FloatingButton"
 
 const Index = () => {
   return (
@@ -15,7 +14,6 @@ const Index = () => {
       <WhyChooseUs />
       <Testimonials />
       <ContactForm />
-      <FloatingButton />
     </div>
   )
 }
