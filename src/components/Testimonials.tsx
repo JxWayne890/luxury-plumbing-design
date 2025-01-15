@@ -1,0 +1,77 @@
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    text: "Adams Plumbing provided exceptional service. Their attention to detail and professionalism is unmatched.",
+    role: "Homeowner"
+  },
+  {
+    name: "Michael Chen",
+    text: "The team's expertise in heating systems saved us from a cold winter. Highly recommended!",
+    role: "Business Owner"
+  },
+  {
+    name: "Emily Davis",
+    text: "Outstanding quality and service. They transformed our outdated bathroom into a modern oasis.",
+    role: "Residential Client"
+  }
+];
+
+const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const next = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  return (
+    <section id="testimonials" className="py-20 bg-navy text-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-playfair text-center font-bold mb-12">
+          Client Testimonials
+        </h2>
+        
+        <div className="relative max-w-3xl mx-auto">
+          <div className="flex items-center justify-between">
+            <button 
+              onClick={prev}
+              className="p-2 hover:bg-white/10 rounded-full transition-colors"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            
+            <div className="text-center px-8">
+              <Quote className="h-8 w-8 text-gold mx-auto mb-6" />
+              <p className="text-lg mb-6 italic">
+                {testimonials[currentIndex].text}
+              </p>
+              <div className="font-playfair">
+                <p className="font-bold text-gold">
+                  {testimonials[currentIndex].name}
+                </p>
+                <p className="text-sm text-cream/70">
+                  {testimonials[currentIndex].role}
+                </p>
+              </div>
+            </div>
+            
+            <button 
+              onClick={next}
+              className="p-2 hover:bg-white/10 rounded-full transition-colors"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
