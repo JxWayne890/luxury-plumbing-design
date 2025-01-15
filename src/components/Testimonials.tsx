@@ -61,15 +61,15 @@ const Testimonials = () => {
             </button>
             
             <div className="text-center px-8">
-              <div className="transition-all duration-500 transform">
+              <div key={currentIndex} className="transition-opacity duration-500 ease-in-out">
                 <Quote className="h-8 w-8 text-gold mx-auto mb-6" />
                 <div className="mb-4">
                   {renderStars(testimonials[currentIndex].rating)}
                 </div>
-                <p className="text-lg mb-6 italic opacity-0 animate-fade-in">
+                <p className="text-lg mb-6 italic">
                   {testimonials[currentIndex].text}
                 </p>
-                <div className="font-playfair opacity-0 animate-fade-in">
+                <div className="font-playfair">
                   <p className="font-bold text-gold">
                     {testimonials[currentIndex].name}
                   </p>
