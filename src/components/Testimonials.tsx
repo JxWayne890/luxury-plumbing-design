@@ -25,15 +25,22 @@ const testimonials = [
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('right');
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const next = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
     setDirection('right');
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setTimeout(() => setIsAnimating(false), 500);
   };
 
   const prev = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
     setDirection('left');
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setTimeout(() => setIsAnimating(false), 500);
   };
 
   const renderStars = (rating: number) => {
@@ -59,6 +66,7 @@ const Testimonials = () => {
               onClick={prev}
               className="p-2 hover:bg-white/10 rounded-full transition-colors z-10"
               aria-label="Previous testimonial"
+              disabled={isAnimating}
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
@@ -92,6 +100,7 @@ const Testimonials = () => {
               onClick={next}
               className="p-2 hover:bg-white/10 rounded-full transition-colors z-10"
               aria-label="Next testimonial"
+              disabled={isAnimating}
             >
               <ChevronRight className="h-6 w-6" />
             </button>
