@@ -2,9 +2,16 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const FAQs = () => {
   const [selectedCategory, setSelectedCategory] = useState("General FAQs");
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/#contact');
+  };
 
   const faqCategories = [
     {
@@ -179,7 +186,7 @@ const FAQs = () => {
   const selectedFaqs = faqCategories.find(cat => cat.title === selectedCategory)?.faqs || [];
 
   return (
-    <div className="min-h-screen bg-navy">
+    <div className="min-h-screen bg-navy relative">
       <Header />
       <div className="container mx-auto px-4 pt-32 pb-16">
         <div className="grid grid-cols-12 gap-8">
@@ -226,6 +233,14 @@ const FAQs = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating Quote Button */}
+      <Button
+        onClick={handleContactClick}
+        className="fixed bottom-8 right-8 bg-gold text-navy hover:bg-cream transition-colors animate-[pulse_2s_infinite] shadow-lg"
+      >
+        Get Your Free Quote
+      </Button>
     </div>
   );
 };
