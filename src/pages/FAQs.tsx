@@ -1,7 +1,11 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useState } from "react";
 import Header from "@/components/Header";
+import { cn } from "@/lib/utils";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const FAQs = () => {
+  const [selectedCategory, setSelectedCategory] = useState("General FAQs");
+
   const faqCategories = [
     {
       title: "General FAQs",
@@ -172,20 +176,42 @@ const FAQs = () => {
     }
   ];
 
+  const selectedFaqs = faqCategories.find(cat => cat.title === selectedCategory)?.faqs || [];
+
   return (
     <div className="min-h-screen bg-navy">
       <Header />
       <div className="container mx-auto px-4 pt-32 pb-16">
-        <h1 className="text-4xl font-playfair text-white mb-8">Frequently Asked Questions</h1>
-        
-        {faqCategories.map((category, index) => (
-          <div key={index} className="mb-8">
-            <h2 className="text-2xl font-playfair text-gold mb-4">{category.title}</h2>
+        <div className="grid grid-cols-12 gap-8">
+          {/* Categories Sidebar */}
+          <div className="col-span-3 bg-white/5 rounded-lg p-4">
+            <h2 className="text-2xl font-playfair text-gold mb-6">Categories</h2>
+            <div className="space-y-2">
+              {faqCategories.map((category) => (
+                <button
+                  key={category.title}
+                  onClick={() => setSelectedCategory(category.title)}
+                  className={cn(
+                    "w-full text-left px-4 py-3 rounded-lg transition-colors",
+                    selectedCategory === category.title
+                      ? "bg-gold text-navy font-medium"
+                      : "text-white hover:bg-white/10"
+                  )}
+                >
+                  {category.title.replace(" FAQs", "")}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* FAQ Content */}
+          <div className="col-span-9">
+            <h1 className="text-4xl font-playfair text-white mb-8">{selectedCategory}</h1>
             <Accordion type="single" collapsible className="space-y-4">
-              {category.faqs.map((faq, faqIndex) => (
+              {selectedFaqs.map((faq, faqIndex) => (
                 <AccordionItem 
                   key={faqIndex} 
-                  value={`${index}-${faqIndex}`}
+                  value={`${faqIndex}`}
                   className="bg-white/5 rounded-lg overflow-hidden"
                 >
                   <AccordionTrigger className="px-4 text-white hover:text-gold">
@@ -198,7 +224,7 @@ const FAQs = () => {
               ))}
             </Accordion>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
