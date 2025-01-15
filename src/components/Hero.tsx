@@ -11,18 +11,18 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-playfair text-white font-bold mb-6">
-            Premium Plumbing & Heating Solutions Tailored for You
+            Affordable Plumbing & Heating Solutions You Can Trust
           </h1>
           <p className="text-xl text-cream/90 mb-8">
-            Serving Abilene with trusted expertise for over 20 years
+            We're a local, low-overhead company offering expert services at prices up to 40% lower than larger competitors.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-gold text-navy hover:bg-cream transition-all hover:scale-105">
-              Request a Quote
+              Get Your Free Quote Today
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-              Explore Our Services
+              Why Choose Us?
             </Button>
           </div>
         </div>
