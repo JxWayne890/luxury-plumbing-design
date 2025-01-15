@@ -24,12 +24,15 @@ const testimonials = [
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState('right');
 
   const next = () => {
+    setDirection('right');
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
   const prev = () => {
+    setDirection('left');
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
@@ -50,18 +53,23 @@ const Testimonials = () => {
           Client Testimonials
         </h2>
         
-        <div className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-3xl mx-auto overflow-hidden">
           <div className="flex items-center justify-between">
             <button 
               onClick={prev}
-              className="p-2 hover:bg-white/10 rounded-full transition-colors"
+              className="p-2 hover:bg-white/10 rounded-full transition-colors z-10"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
             
-            <div className="text-center px-8">
-              <div key={currentIndex} className="transition-opacity duration-500 ease-in-out">
+            <div className="text-center px-8 w-full">
+              <div 
+                key={currentIndex} 
+                className={`transform transition-all duration-500 ${
+                  direction === 'right' ? 'animate-slide-in' : 'animate-slide-in-reverse'
+                }`}
+              >
                 <Quote className="h-8 w-8 text-gold mx-auto mb-6" />
                 <div className="mb-4">
                   {renderStars(testimonials[currentIndex].rating)}
@@ -82,7 +90,7 @@ const Testimonials = () => {
             
             <button 
               onClick={next}
-              className="p-2 hover:bg-white/10 rounded-full transition-colors"
+              className="p-2 hover:bg-white/10 rounded-full transition-colors z-10"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-6 w-6" />
