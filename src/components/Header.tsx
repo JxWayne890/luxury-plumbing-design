@@ -35,7 +35,7 @@ const Header = () => {
               </nav>
               <Button className="bg-gold text-navy hover:bg-cream transition-colors">
                 <Phone className="mr-2 h-4 w-4" />
-                (325) 555-0123
+                (325) 677-6322
               </Button>
             </>
           ) : (
