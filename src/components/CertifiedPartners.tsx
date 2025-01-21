@@ -10,23 +10,23 @@ import Autoplay from "embla-carousel-autoplay";
 const partners = [
   {
     name: "Pfister Faucets",
-    logo: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=300&h=200&fit=crop", // Faucet image
+    logo: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=300&h=200&fit=crop",
   },
   {
     name: "InSinkErator",
-    logo: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&h=200&fit=crop", // Kitchen sink image
+    logo: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&h=200&fit=crop",
   },
   {
     name: "Kohler",
-    logo: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=300&h=200&fit=crop", // Modern bathroom fixture
+    logo: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=300&h=200&fit=crop",
   },
   {
     name: "American Standard",
-    logo: "https://images.unsplash.com/photo-1560185127-2e9c54d9d360?w=300&h=200&fit=crop", // Bathroom interior
+    logo: "https://images.unsplash.com/photo-1560185127-2e9c54d9d360?w=300&h=200&fit=crop",
   },
   {
     name: "Delta Faucets",
-    logo: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=300&h=200&fit=crop", // Modern faucet
+    logo: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=300&h=200&fit=crop",
   },
 ];
 
@@ -34,7 +34,7 @@ const CertifiedPartners = () => {
   const plugin = React.useMemo(
     () =>
       Autoplay({
-        delay: 2000,
+        delay: 0,
         stopOnInteraction: true,
         stopOnMouseEnter: true,
         rootNode: (emblaRoot) => emblaRoot.parentElement,
