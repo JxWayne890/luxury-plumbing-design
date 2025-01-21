@@ -4,6 +4,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
+import Autoplay from "embla-carousel-autoplay";
 
 const partners = [
   {
@@ -29,6 +30,16 @@ const partners = [
 ];
 
 const CertifiedPartners = () => {
+  const plugin = React.useMemo(
+    () =>
+      Autoplay({
+        delay: 2000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    []
+  );
+
   return (
     <section className="w-full py-12 bg-white">
       <div className="container mx-auto px-4">
@@ -43,6 +54,7 @@ const CertifiedPartners = () => {
             dragFree: true,
             containScroll: false,
           }}
+          plugins={[plugin]}
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
