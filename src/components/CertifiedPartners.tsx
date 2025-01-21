@@ -75,7 +75,7 @@ const CertifiedPartners = () => {
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
               </CarouselItem>
