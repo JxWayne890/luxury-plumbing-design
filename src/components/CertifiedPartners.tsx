@@ -8,23 +8,23 @@ import { cn } from "@/lib/utils";
 const partners = [
   {
     name: "Pfister Faucets",
-    logo: "/placeholder.svg", // Replace with actual logo
+    logo: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=300&h=200&fit=crop", // Faucet image
   },
   {
     name: "InSinkErator",
-    logo: "/placeholder.svg", // Replace with actual logo
+    logo: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&h=200&fit=crop", // Kitchen sink image
   },
   {
     name: "Kohler",
-    logo: "/placeholder.svg", // Replace with actual logo
+    logo: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=300&h=200&fit=crop", // Modern bathroom fixture
   },
   {
     name: "American Standard",
-    logo: "/placeholder.svg", // Replace with actual logo
+    logo: "https://images.unsplash.com/photo-1560185127-2e9c54d9d360?w=300&h=200&fit=crop", // Bathroom interior
   },
   {
     name: "Delta Faucets",
-    logo: "/placeholder.svg", // Replace with actual logo
+    logo: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=300&h=200&fit=crop", // Modern faucet
   },
 ];
 
