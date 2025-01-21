@@ -10,23 +10,28 @@ import Autoplay from "embla-carousel-autoplay";
 const partners = [
     {
       name: "Pfister Faucets",
-      logo: "/images/Pfister.png"
+      logo: "/images/Pfister.png",
+      maxHeight: "h-24" // Smaller
     },
     {
       name: "InSinkErator",
-      logo: "/images/insinkerator.png"
+      logo: "/images/insinkerator.png",
+      maxHeight: "h-32" // Larger
     },
     {
       name: "Kohler",
-      logo: "/images/Kohler.png"
+      logo: "/images/Kohler.png",
+      maxHeight: "h-28" // Medium
     },
     {
       name: "American Standard",
-      logo: "/images/American.png"
+      logo: "/images/American.png",
+      maxHeight: "h-24" // Smaller
     },
     {
       name: "Delta Faucets",
-      logo: "/images/Delta.png"
+      logo: "/images/Delta.png",
+      maxHeight: "h-32" // Larger
     }
 ];
 
@@ -75,7 +80,10 @@ const CertifiedPartners = () => {
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="max-h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                    className={cn(
+                      partner.maxHeight,
+                      "w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                    )}
                   />
                 </div>
               </CarouselItem>
