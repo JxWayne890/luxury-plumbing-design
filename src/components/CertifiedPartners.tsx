@@ -35,8 +35,8 @@ const CertifiedPartners = () => {
     () =>
       Autoplay({
         delay: 3000,
-        stopOnInteraction: true,
-        stopOnMouseEnter: true,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
         rootNode: (emblaRoot) => emblaRoot.parentElement,
       }),
     []
