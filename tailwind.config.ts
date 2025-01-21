@@ -20,8 +20,7 @@ export default {
     extend: {
       colors: {
         navy: "#1A1F2C",
-        gold: "#FEC6A1",
-        cream: "#FDE1D3",
+        white: "#FFFFFF",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -32,7 +32,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-cream">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-playfair text-navy font-bold mb-8 text-center">
           Get Your Free Quote Today
@@ -92,7 +92,7 @@ const ContactForm = () => {
                   </FormItem>
                 )}
               />
-              <Button type="submit" size="lg" className="w-full bg-gold text-navy hover:bg-cream">
+              <Button type="submit" size="lg" className="w-full bg-navy text-white hover:bg-white hover:text-navy border-2 border-navy">
                 Send Message
               </Button>
             </form>

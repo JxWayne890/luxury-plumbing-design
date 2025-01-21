@@ -26,12 +26,12 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-cream/10">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-playfair text-navy text-center font-bold mb-4">
           Our Services
         </h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
           We deliver expert results without breaking your budget. As a local, family-owned business, we pride ourselves on offering competitive pricing without compromising quality.
         </p>
         
@@ -39,18 +39,18 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+              className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-navy/10"
             >
-              <div className="text-gold mb-6">
+              <div className="text-navy mb-6">
                 {service.icon}
               </div>
               <h3 className="text-xl font-playfair text-navy font-bold mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-navy/70 mb-6">
                 {service.description}
               </p>
-              <Button variant="outline" className="w-full hover:bg-gold hover:text-navy">
+              <Button variant="outline" className="w-full hover:bg-navy hover:text-white border-navy">
                 Learn More
               </Button>
             </div>

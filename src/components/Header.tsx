@@ -28,19 +28,19 @@ const Header = () => {
           {!isFAQsPage ? (
             <>
               <nav className="hidden md:flex space-x-8">
-                <a href="#services" className="text-white hover:text-gold transition-colors">Services</a>
-                <a href="#testimonials" className="text-white hover:text-gold transition-colors">Testimonials</a>
-                <a href="#contact" className="text-white hover:text-gold transition-colors">Contact</a>
-                <Link to="/faqs" className="text-white hover:text-gold transition-colors">FAQs</Link>
+                <a href="#services" className="text-white hover:text-navy transition-colors">Services</a>
+                <a href="#testimonials" className="text-white hover:text-navy transition-colors">Testimonials</a>
+                <a href="#contact" className="text-white hover:text-navy transition-colors">Contact</a>
+                <Link to="/faqs" className="text-white hover:text-navy transition-colors">FAQs</Link>
               </nav>
-              <Button className="bg-gold text-navy hover:bg-cream transition-colors">
+              <Button className="bg-white text-navy hover:bg-navy hover:text-white transition-colors">
                 <Phone className="mr-2 h-4 w-4" />
                 (325) 677-6322
               </Button>
             </>
           ) : (
             <nav className="hidden md:flex space-x-8">
-              <Link to="/faqs" className="text-white hover:text-gold transition-colors">FAQs</Link>
+              <Link to="/faqs" className="text-white hover:text-navy transition-colors">FAQs</Link>
             </nav>
           )}
         </div>
