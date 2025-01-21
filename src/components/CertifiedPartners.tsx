@@ -34,7 +34,7 @@ const CertifiedPartners = () => {
   const plugin = React.useMemo(
     () =>
       Autoplay({
-        delay: 0,
+        delay: 3000,
         stopOnInteraction: true,
         stopOnMouseEnter: true,
         rootNode: (emblaRoot) => emblaRoot.parentElement,
