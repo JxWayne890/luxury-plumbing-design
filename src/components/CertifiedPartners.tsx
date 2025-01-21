@@ -8,26 +8,26 @@ import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 
 const partners = [
-  {
-    name: "Pfister Faucets",
-    logo: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=300&h=200&fit=crop",
-  },
-  {
-    name: "InSinkErator",
-    logo: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&h=200&fit=crop",
-  },
-  {
-    name: "Kohler",
-    logo: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=300&h=200&fit=crop",
-  },
-  {
-    name: "American Standard",
-    logo: "https://images.unsplash.com/photo-1560185127-2e9c54d9d360?w=300&h=200&fit=crop",
-  },
-  {
-    name: "Delta Faucets",
-    logo: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=300&h=200&fit=crop",
-  },
+    {
+      name: "Pfister Faucets",
+      logo: "/images/Pfister.png"
+    },
+    {
+      name: "InSinkErator",
+      logo: "/images/insinkerator.png"
+    },
+    {
+      name: "Kohler",
+      logo: "/images/Kohler.png"
+    },
+    {
+      name: "American Standard",
+      logo: "/images/American.png"
+    },
+    {
+      name: "Delta Faucets",
+      logo: "/images/Delta.png"
+    }
 ];
 
 const CertifiedPartners = () => {
@@ -75,7 +75,7 @@ const CertifiedPartners = () => {
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="max-h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="max-h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
               </CarouselItem>
